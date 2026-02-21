@@ -1,0 +1,71 @@
+<div class="container">
+  <header>
+    <h1>Cifrado Clásico: César & Atbash</h1>
+  </header>
+
+  <section class="config-panel">
+    <h3>Configuración</h3>
+
+    <div class="form-group">
+      <label for="alfabeto">Alfabeto:</label>
+      <input type="text"
+             id="alfabeto"
+             [(ngModel)]="alfabeto"
+             placeholder="Ej: abcdef... (Edítame para personalizar)"
+             class="full-width">
+      <small>Total caracteres: {{ alfabeto.length }}</small>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <label>Método de Cifrado:</label>
+        <select [(ngModel)]="metodoSeleccionado" name="metodoSeleccionado" class="form-control">
+          <option value="cesar">Cifrado César</option>
+          <option value="atbash">Cifrado Atbash</option>
+        </select>
+      </div>
+      <div class="col">
+        <label>Modo:</label>
+        <select [(ngModel)]="modoOperacion" name="modoOperacion" class="form-control">
+          <option value="cifrar">Encriptar</option>
+          <option value="descifrar">Desencriptar</option>
+        </select>
+      </div>
+    </div>
+
+    @if (metodoSeleccionado === 'cesar') {
+      <div class="form-group">
+        <label for="desplazamiento">Desplazamiento (N):</label>
+        <input type="number"
+              id="desplazamiento"
+              [(ngModel)]="desplazamiento">
+      </div>
+    }
+  </section>
+
+  <hr>
+
+  <section class="io-panel">
+    <h3>Procesamiento de Datos</h3>
+
+    <div class="form-group">
+      <label for="entrada">Mensaje de Entrada:</label>
+      <textarea id="entrada"
+                [(ngModel)]="mensajeEntrada"
+                rows="4"
+                placeholder="Escribe aquí el texto..."></textarea>
+    </div>
+
+    <button (click)="procesarMensaje()" class="btn-primary">
+      Ejecutar {{ modoOperacion | titlecase }}
+    </button>
+
+    <div class="form-group result-box">
+      <label for="salida">Resultado:</label>
+      <textarea id="salida"
+                [value]="mensajeSalida"
+                readonly
+                rows="4"></textarea>
+    </div>
+  </section>
+</div>

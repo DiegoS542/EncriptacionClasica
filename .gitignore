@@ -1,0 +1,41 @@
+# ==========================================
+# DEPENDENCIAS
+# ==========================================
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# ==========================================
+# ARCHIVOS DE COMPILACIÓN (Build)
+# ==========================================
+dist/
+tmp/
+out-tsc/
+bazel-out/
+
+# ==========================================
+# FIREBASE Y SERVIDORES
+# ==========================================
+.firebase/
+firebase-debug.log*
+firebase-debug.log
+
+# ==========================================
+# ENTORNOS Y SECRETOS
+# ==========================================
+.env
+.env.*
+*.local
+.angular/
+
+# ==========================================
+# IDEs Y SISTEMA OPERATIVO (VS Code, Mac, etc)
+# ==========================================
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.idea/
+.DS_Store
+Thumbs.db

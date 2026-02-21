@@ -1,0 +1,200 @@
+/* RESET BÁSICO Y TEMA OSCURO */
+:host {
+  display: block;
+  min-height: 100vh;
+  background-color: #0f172a;
+  /* Azul oscurísimo (Ciberseguridad) */
+  color: #e2e8f0;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  padding: 20px;
+}
+
+/* CONTENEDOR PRINCIPAL */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #1e293b;
+  /* Panel gris azulado */
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
+  border: 1px solid #334155;
+}
+
+/* ENCABEZADO */
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #334155;
+  padding-bottom: 1rem;
+}
+
+header h1 {
+  color: #38bdf8;
+  /* Cyan neón */
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: 1px;
+}
+
+header p {
+  color: #94a3b8;
+  font-size: 0.9rem;
+}
+
+/* SECCIONES */
+section {
+  margin-bottom: 2rem;
+}
+
+h3 {
+  color: #f8fafc;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  border-left: 4px solid #38bdf8;
+  padding-left: 10px;
+}
+
+/* INPUTS Y SELECTS */
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #cbd5e1;
+}
+
+input[type="text"],
+input[type="number"],
+select,
+textarea {
+  width: 100%;
+  padding: 10px 12px;
+  background-color: #0f172a;
+  border: 1px solid #475569;
+  border-radius: 6px;
+  color: #fff;
+  font-family: 'Consolas', 'Monaco', monospace;
+  /* Importante para Cifrados */
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+}
+
+/* Efecto Focus (Brillo al seleccionar) */
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #38bdf8;
+  box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.2);
+}
+
+/* GRID PARA LOS SELECTS */
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 600px) {
+  .row {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* BOTÓN PRINCIPAL */
+.btn-primary {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.1s ease, box-shadow 0.2s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #38bdf8 0%, #0ea5e9 100%);
+  box-shadow: 0 4px 12px rgba(14, 165, 233, 0.3);
+}
+
+.btn-primary:active {
+  transform: scale(0.98);
+}
+
+/* ÁREA DE RESULTADO */
+.result-box textarea {
+  background-color: #020617;
+  /* Casi negro */
+  border: 1px dashed #475569;
+  color: #4ade80;
+  /* Verde terminal hacker */
+  font-weight: bold;
+}
+
+/* TEXTO PEQUEÑO */
+small {
+  display: block;
+  margin-top: 5px;
+  color: #64748b;
+  font-size: 0.8rem;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background: #334155;
+  margin: 2rem 0;
+}
+
+/* ACTUALIZACIÓN PARA LOS TEXTAREA */
+textarea {
+  width: 100%;
+  padding: 10px 12px;
+  background-color: #0f172a;
+  border: 1px solid #475569;
+  border-radius: 6px;
+  color: #fff;
+  font-family: 'Consolas', 'Monaco', monospace;
+  font-size: 0.95rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+
+  /* LA MAGIA AQUÍ: Permite arrastrar la esquina hacia abajo */
+  resize: vertical;
+  min-height: 150px;
+  /* Tamaño por defecto más grande */
+  max-height: 800px;
+  /* Límite para que no rompa la página */
+  line-height: 1.5;
+}
+
+/* ESTILO CYBERPUNK PARA LA BARRA DE DESPLAZAMIENTO (Opcional pero recomendado) */
+textarea::-webkit-scrollbar {
+  width: 8px;
+}
+
+textarea::-webkit-scrollbar-track {
+  background: #0f172a;
+  border-radius: 4px;
+}
+
+textarea::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 4px;
+}
+
+textarea::-webkit-scrollbar-thumb:hover {
+  background: #38bdf8;
+  /* Brilla al pasar el mouse */
+}
